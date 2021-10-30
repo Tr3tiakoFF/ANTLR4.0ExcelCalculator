@@ -1,0 +1,6 @@
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorLexer.cs
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorParser.cs
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorListener.cs
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorBaseListener.cs
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorVisitor.cs
+C:\Users\Administrator\source\repos\OOPFirstLab\OOPFirstLab\obj\Debug\net5.0-windows\ExcelCalculatorBaseVisitor.cs
