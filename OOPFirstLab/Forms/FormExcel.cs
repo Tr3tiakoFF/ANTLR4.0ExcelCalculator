@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -396,6 +397,38 @@ namespace OOPFirstLab.Forms
         private bool AddressPresence(DataCell _dataCell, string _adress)
         {
             return _dataCell.Expression.Contains(_adress);
+        }
+
+        private void saveToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog.ShowDialog() == DialogResult.Cancel)
+                return;
+
+            string _fileName = saveFileDialog.FileName;
+            StreamWriter _streamWriter = new StreamWriter(_fileName);
+
+            try
+            {
+                _streamWriter.WriteLine(dataGridView.ColumnCount);
+                _streamWriter.WriteLine(dataGridView.RowCount);
+
+                for(int i = 0; i < dataGridView.ColumnCount; i++)
+                {
+                    for(int j = 0; j < dataGridView.RowCount; j++)
+                    {
+                        string _cellName = SetCellName(i, j);
+                        _streamWriter.WriteLine(Dictionary[_cellName].Expression);
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("An error occurred while writing the file");
+            }
+            finally
+            {
+                _streamWriter.Close();
+            }
         }
 
         /*        private void dataGridView_KeyDown(object sender, KeyEventArgs e)
